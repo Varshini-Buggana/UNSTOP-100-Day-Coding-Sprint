@@ -1,0 +1,54 @@
+PROBLEM STATEMENT:-
+
+(chess board image given, x-axis a-h, y-axis 1-8)
+
+Above is the standard representation of a chessboard.
+This could be imagined as a 2D cartesian plane, with the x axis being represented by the alphabets and y axis by the numbers.
+Given coordinates in the form of string, print if that cell is white or black.
+
+Input Format
+First line contains a string s.
+
+Output Format
+White or Black.
+
+Constraints
+|s|=2
+
+Sample Testcase 0
+Testcase Input
+b2
+Testcase Output
+Black
+Explanation
+Self explanatory.
+
+Sample Testcase 1
+Testcase Input
+a1
+Testcase Output
+Black
+Explanation
+We can clearly see a1 is black in the diagram.
+
+OUTPUT:-
+
+def chessboard_color(coordinates):
+    x = ord(coordinates[0]) - ord('a')
+    y = int(coordinates[1]) - 1
+    
+    if (x + y) % 2 == 0:
+        return "Black"
+    else:
+        return "White"
+
+coordinates = input()
+print(chessboard_color(coordinates))
+
+
+EXPLAINATION:-
+
+1. We first convert the x-coordinate (the alphabet) to a number by subtracting the ASCII value of 'a' from it.
+2. We then convert the y-coordinate (the number) to an integer and subtract 1 from it to make it 0-indexed.
+3. We use the fact that the color of a cell on a chessboard is determined by the sum of its coordinates. If the sum is even, the cell is black; otherwise, it's white.
+4. We use the modulo operator (%) to check if the sum of the coordinates is even. If it is, we return "Black"; otherwise, we return "White".
