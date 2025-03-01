@@ -34,7 +34,7 @@ Testcase Output
 Explanation
 Flowers at 0th and 3rd indexes sum up to the target only i.e. 1 + 4 = 5 .*
 
-OUTPUT:-
+CODE:-
 
 def find_flower_indices(n, t, arr):
     """Write your logic here.
