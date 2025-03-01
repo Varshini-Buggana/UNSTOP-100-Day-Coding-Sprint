@@ -31,7 +31,7 @@ Black
 Explanation
 We can clearly see a1 is black in the diagram.
 
-OUTPUT:-
+CODE:-
 
 def chessboard_color(coordinates):
     x = ord(coordinates[0]) - ord('a')
